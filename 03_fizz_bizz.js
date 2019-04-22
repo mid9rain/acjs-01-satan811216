@@ -6,8 +6,21 @@
 // 例如   [1, 2, 3, 4, 5]
 // 會回傳 [1, 2, Fizz, 4, Buzz]
 
-function fizzBuzz(input) {
-  // 把你的解答寫在這裡。要記得 return 喔。
-}
 
-module.exports = {fizzBuzz};
+
+let n = [1, 2, 3, 4, 5];
+let result = '';
+function fizzBuzz(n) {
+  // 把你的解答寫在這裡。要記得 return 喔。
+	 for(let i = 0; i < n.length; i++){
+		if(n[i] % 3 === 0 ){
+	  	n[i] = 'Fizz';
+	  }else if(n[i] % 5 === 0){
+	  	n[i] = 'Buzz';
+	  }else{
+	  	n[i] = n[i];
+	  }
+	}
+    return n.join(' ');
+}
+// console.log(fizzBuzz(n));
