@@ -8,12 +8,14 @@
 
 
 
-let n = [1, 2, 3, 4, 5];
+let n = [1, 2, 3, 4, 5, 15];
 let result = '';
 function fizzBuzz(n) {
   // 把你的解答寫在這裡。要記得 return 喔。
 	 for(let i = 0; i < n.length; i++){
-		if(n[i] % 3 === 0 ){
+		if(n[i] % 3 === 0 && n[i] % 5 === 0){
+	  	n[i] = 'FizzBuzz';
+	  }else if(n[i] % 3 === 0){
 	  	n[i] = 'Fizz';
 	  }else if(n[i] % 5 === 0){
 	  	n[i] = 'Buzz';
@@ -23,4 +25,4 @@ function fizzBuzz(n) {
 	}
     return n.join(' ');
 }
-// console.log(fizzBuzz(n));
+console.log(fizzBuzz(n));
